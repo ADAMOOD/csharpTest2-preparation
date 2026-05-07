@@ -1,0 +1,28 @@
+﻿@model IEnumerable<CurrencyTransfere2.Models.Exchange>
+<h1> tabulka smen</h1>
+<table>
+    <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Selected Currency</th>
+    <th>Ammount</th>
+    <th>Result</th>
+    </thead>
+    <tbody>
+    @{
+        foreach (var exchange in @Model)
+        {
+            <tr>
+                <td>@exchange.Id</td>
+                <td>@exchange.Name</td>
+                <td>@exchange.Email</td>
+                <td>@exchange.SelectedCurrency</td>
+                <td>@exchange.Ammount</td>
+                <td>@exchange.Result</td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+

@@ -1,0 +1,28 @@
+﻿@model c_Test2_preparatio_currency_.Models.CurrencyResponse
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <form method="post">
+        <input type="text" required placeholder="jmeno"/>
+        <input type="email"  placeholder="email" />
+        <select required name="currency">
+            @{
+                foreach (var curr in @Model.Kurzy)
+                {
+                    <option value="@curr.Key">@curr.Key</option>
+                }
+            }
+        </select>
+        <input type="number" placeholder="castka" name="castka" />
+        <input type="submit"/>
+    </form>
+    <h3>
+       @ViewBag.Vysledek @ViewBag.Currency
+    </h3>
+
+</div>
