@@ -1,0 +1,17 @@
+﻿@model Gemin.Models.Company
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="text" asp-for="@Model.Name" placeholder="Nazev firmy" />
+    <input type="text" asp-for="@Model.DIC" placeholder="DIC firmy" />
+    <input type="number" asp-for="@Model.EmployeeCount" placeholder="Pocet zamestnancu " value="1" />
+    <select asp-for="@Model.CompamyType">
+        @{
+            foreach (var type in Enum.GetValues(typeof(CompanyTypes)))
+            {
+                <option>@type</option>
+            }
+        }
+    </select>
+    <input type="text" placeholder="poznamka..." asp-for="@Model.Notes"/>
+</form>
