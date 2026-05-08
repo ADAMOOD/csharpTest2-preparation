@@ -13,7 +13,7 @@ namespace Menza_XML.Services
             _httpClient = httpClient;
         }
 
-        public async Task<Stream> makeRequestAsync(DateTime date)
+        public async Task<String> makeRequestAsync(DateTime date)
         {
             HttpResponseMessage response = new HttpResponseMessage();
             bool first = true;
@@ -51,8 +51,8 @@ namespace Menza_XML.Services
                     await Task.Delay(new TimeSpan(0, 0, 0, 2));//pockej pro jistotu 2 sekundy
                 }
             }
-            return await response.Content.ReadAsStreamAsync();
 
+            return await response.Content.ReadAsStringAsync();
         }
 
     }

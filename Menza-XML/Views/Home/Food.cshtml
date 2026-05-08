@@ -1,2 +1,35 @@
-﻿@model IEnumerable<Menza_XML.Models.FoodModel>
+﻿@model Menza_XML.Models.MenzaResponse
 
+<h1>date : @ViewBag.date</h1>
+<table>
+    <thead>
+    <th>name</th>
+    <th>price</th>
+    <th>Meal kind</th>
+    <th>alt id</th>
+    <th></th>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in @Model.Items)
+            {
+                if (item.mealKindId != 2)
+                {
+                    continue;
+                }
+                <tr>
+                    <td>@item.name</td>
+                    <td>@item.price</td>
+                    <td>@item.mealKindId</td>
+                    <td >@item.altId</td>
+                    <td class="link-info">
+                        <a asp-action="Detail" 
+                           asp-route-altId="@item.altId" 
+                           asp-route-name="@item.name" 
+                           asp-route-date="@(((DateTime)ViewBag.date).ToString("yyyy-MM-dd"))">Edit</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

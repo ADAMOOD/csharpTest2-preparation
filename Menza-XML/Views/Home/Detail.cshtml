@@ -1,0 +1,15 @@
+﻿@model Menza_XML.Models.FoodDbViewModel
+
+<h1>date : @Model.Date</h1>
+<h2>food</h2>
+<h3 class="">@Model.Food.name</h3>
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="Date" />
+    <input type="hidden" asp-for="Food.altId" />
+    <input type="hidden" asp-for="Food.name" />
+
+    <label>Vaše jméno:</label>
+    <input asp-for="Name" type="text" />
+    <input type="submit" value="Uložit do DB" />
+</form>

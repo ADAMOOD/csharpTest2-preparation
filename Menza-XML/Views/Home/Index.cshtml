@@ -1,5 +1,5 @@
 ﻿@{
-    @model Menza_XML.Models.DateViewModel
+    @model Menza_XML.Models.IndexViewModel
     ViewData["Title"] = "Home Page";
 }
 
@@ -7,6 +7,17 @@
     <form method="post">
         <div asp-validation-summary="All"></div>
         <input type="date" asp-for="Date" />
-        <input type="submit"/>
+        <input type="submit" />
     </form>
+    <h1>Databaze</h1>
+    <table>
+        @foreach (var order in Model.Orders)
+        {
+            <tr>
+                <td>@order.UserName</td>
+                <td>@order.FoodName</td>
+                <td>@order.OrderDate</td>
+            </tr>
+        }
+    </table>
 </div>
