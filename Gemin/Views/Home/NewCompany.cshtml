@@ -2,10 +2,10 @@
 
 <form method="post">
     <div asp-validation-summary="All"></div>
-    <input type="text" asp-for="@Model.Name" placeholder="Nazev firmy" />
-    <input type="text" asp-for="@Model.DIC" placeholder="DIC firmy" />
-    <input type="number" asp-for="@Model.EmployeeCount" placeholder="Pocet zamestnancu " value="1" />
-    <select asp-for="@Model.CompamyType">
+    <input type="text" asp-for="Name" placeholder="Nazev firmy" />
+    <input type="text" asp-for="DIC" placeholder="DIC firmy" />
+    <input type="number" asp-for="EmployeeCount" placeholder="Pocet zamestnancu " value="1" />
+    <select asp-for="CompanyType">
         @{
             foreach (var type in Enum.GetValues(typeof(CompanyTypes)))
             {
@@ -14,4 +14,5 @@
         }
     </select>
     <input type="text" placeholder="poznamka..." asp-for="@Model.Notes"/>
+    <input type="submit" value="vytvorit firmu"/>
 </form>

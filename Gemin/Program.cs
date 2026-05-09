@@ -1,12 +1,26 @@
+using Dapper;
+using Gemin.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
 
+builder.Services.AddScoped<ApiService>();//zaregistrovat servis
 
+string connectionString = builder.Configuration.GetConnectionString("defaultConnection");
+
+builder.Services.AddScoped<DbService>(provider => new DbService(connectionString));
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var service = scope.ServiceProvider.GetRequiredService<DbService>();
+    await service.Init();
+}
+Dapper.SimpleCRUD.SetDialect(SimpleCRUD.Dialect.SQLite);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

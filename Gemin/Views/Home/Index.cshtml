@@ -1,8 +1,39 @@
-﻿@{
+﻿@model IEnumerable<Gemin.Models.Company>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Firmy</h1>
+    @{
+        if (Model.Any())
+        {
+            <table>
+                <thead>
+                <th>Name</th>
+                <th>DIC</th>
+                <th>Pocet zamestnancu</th>
+                <th>Pravni forma</th>
+                <th>Poznamky</th>
+                <th></th>
+                </thead>
+                <tbody>
+                @{
+                foreach (var company in Model)
+                {
+                    <tr>
+                        <td>@company.Name</td>
+                        <td>@company.DIC</td>
+                        <td>@company.EmployeeCount</td>
+                        <td>@Company.getCompanyType(company.CompanyType)</td>
+                        <td>@company.Notes</td>
+                        <td><a asp-action="Delete" asp-route-id="@company.Id" class="alert-warning">Odstranit</a></td>
+                    </tr>
+                }
+            }
+                </tbody>
+            </table>
+        }
+    }
     <a asp-action="NewCompany" class="btn btn-primary">Přidat novou firmu</a>
 </div>
