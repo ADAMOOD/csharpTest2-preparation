@@ -87,9 +87,8 @@ namespace IC_WPF.Dialogs
                 return;
             }
             MessageBox.Show($"Firma {company.Name} uspesne vlozena do db", "Uspech", MessageBoxButton.OK, MessageBoxImage.Information);
-            DialogResult = true;
-            this.Close();
-            return;
+            DialogResult = true;//automaticky zavre
+
             
         }
     }

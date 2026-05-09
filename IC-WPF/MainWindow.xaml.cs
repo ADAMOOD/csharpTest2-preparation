@@ -93,12 +93,12 @@ namespace IC_WPF
 
         private async void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
+            await _dbservice.InitAsync();
             await ReloadTable();
         }
 
         private async Task ReloadTable()
         {
-            await _dbservice.InitAsync();
             List<Company> companies = await _dbservice.GetAllCompaniesAsync();
             if (companies.Any())
             {

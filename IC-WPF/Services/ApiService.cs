@@ -11,7 +11,7 @@ namespace IC_WPF
     class ApiService
     {
         private readonly HttpClient _httpClient;
-        private string Uri = "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/";
+
         public ApiService(HttpClient httpClient)
         {
             _httpClient = httpClient;
@@ -19,8 +19,8 @@ namespace IC_WPF
 
         public async Task<HttpResponseMessage> makeRequest(string IC)
         {
-            Uri += IC;
-           return await _httpClient.GetAsync(Uri);
+            string url = $"https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/{IC}";
+            return await _httpClient.GetAsync(url);
         }
     }
 }

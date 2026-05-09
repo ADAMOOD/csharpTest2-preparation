@@ -1,0 +1,18 @@
+﻿@model FinancialOfice.Models.FormViewModel
+<h1>FORMURAR</h1>
+<form method="post">
+    <div asp-validation-summary="All"></div> 
+    <input type="hidden" asp-for="Chodnota" />
+    <input asp-for="Name" type="text" placeholder="Jmeno"/>
+    <input asp-for="Email" type="email" placeholder="Email"/>
+    <select asp-for="Gender">
+        @{
+            foreach (var gender in Enum.GetValues(typeof(Gender)))
+            {
+                <option value="@gender">@gender</option>
+            }
+        }
+    </select>
+    <textarea asp-for="Notes" placeholder="Zadejte sem nejakou vasi poznamku..."></textarea>
+    <input type="submit"/>
+</form>

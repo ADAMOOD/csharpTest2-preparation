@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gemin", "Gemin\Gemin.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IC-WPF", "IC-WPF\IC-WPF.csproj", "{E5B4451F-C338-4AC3-B765-E3138D61A67E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialOfice", "FinancialOfice\FinancialOfice.csproj", "{829E6DD0-7038-4EC0-8F7A-ED0F1EF047B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E5B4451F-C338-4AC3-B765-E3138D61A67E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5B4451F-C338-4AC3-B765-E3138D61A67E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5B4451F-C338-4AC3-B765-E3138D61A67E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{829E6DD0-7038-4EC0-8F7A-ED0F1EF047B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829E6DD0-7038-4EC0-8F7A-ED0F1EF047B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829E6DD0-7038-4EC0-8F7A-ED0F1EF047B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829E6DD0-7038-4EC0-8F7A-ED0F1EF047B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
