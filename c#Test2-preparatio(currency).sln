@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostalCodeMVC", "PostalCode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalGeminiBossFight", "FinalGeminiBossFight\FinalGeminiBossFight.csproj", "{9B06F912-31E5-4779-8993-4193FAD4D309}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitiesWPF", "CitiesWPF\CitiesWPF.csproj", "{233698E3-9C67-4FF0-A3F4-A52250AC9AE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{9B06F912-31E5-4779-8993-4193FAD4D309}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B06F912-31E5-4779-8993-4193FAD4D309}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B06F912-31E5-4779-8993-4193FAD4D309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{233698E3-9C67-4FF0-A3F4-A52250AC9AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{233698E3-9C67-4FF0-A3F4-A52250AC9AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{233698E3-9C67-4FF0-A3F4-A52250AC9AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{233698E3-9C67-4FF0-A3F4-A52250AC9AE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

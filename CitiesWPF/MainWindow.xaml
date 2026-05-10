@@ -1,0 +1,42 @@
+﻿<Window x:Class="CitiesWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CitiesWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ComboBox Width="200" Margin="10" x:Name="CityCB">
+            <ComboBoxItem>Ostrava</ComboBoxItem>
+            <ComboBoxItem>Praha</ComboBoxItem>
+            <ComboBoxItem>Brno</ComboBoxItem>
+        </ComboBox>
+        <Button Grid.Column="1" Margin="10" Click="Button_ClickAsync" x:Name="btn" >Potvrdit vyber</Button>
+        <DataGrid Grid.Column="0" Grid.Row="2" x:Name="SubjectsDG" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Název" Binding="{Binding Nazev}" />
+                <DataGridTextColumn Header="IČO" Binding="{Binding ico}" />
+                <DataGridTextColumn Header="Datum zápisu" Binding="{Binding zapisDatum}" />
+
+                <DataGridTemplateColumn Header="Akce">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Editovat" Click="EditButton_Click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
