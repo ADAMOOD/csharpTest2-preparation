@@ -1,0 +1,8 @@
+Object => Transfer
+{
+#CurrencyCode => USD;
+#Name => ADAM;
+#Email => adam.kijonka@seznam.cz;
+#AccountNumber => 4568-42494644/70030;
+#County => okres Ostrava-město;
+}

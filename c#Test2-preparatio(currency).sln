@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IC-WPF", "IC-WPF\IC-WPF.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialOfice", "FinancialOfice\FinancialOfice.csproj", "{829E6DD0-7038-4EC0-8F7A-ED0F1EF047B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostalCodeMVC", "PostalCodeMVC\PostalCodeMVC.csproj", "{65683AC3-2818-4B7C-B786-949EE3CD0858}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalGeminiBossFight", "FinalGeminiBossFight\FinalGeminiBossFight.csproj", "{9B06F912-31E5-4779-8993-4193FAD4D309}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{829E6DD0-7038-4EC0-8F7A-ED0F1EF047B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{829E6DD0-7038-4EC0-8F7A-ED0F1EF047B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{829E6DD0-7038-4EC0-8F7A-ED0F1EF047B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65683AC3-2818-4B7C-B786-949EE3CD0858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65683AC3-2818-4B7C-B786-949EE3CD0858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65683AC3-2818-4B7C-B786-949EE3CD0858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65683AC3-2818-4B7C-B786-949EE3CD0858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B06F912-31E5-4779-8993-4193FAD4D309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B06F912-31E5-4779-8993-4193FAD4D309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B06F912-31E5-4779-8993-4193FAD4D309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B06F912-31E5-4779-8993-4193FAD4D309}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

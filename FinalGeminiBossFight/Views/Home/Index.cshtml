@@ -1,0 +1,23 @@
+﻿@model FinalGeminiBossFight.Models.IndexViewModel
+
+<div class="text-center">
+    <h3>
+        @{
+            if(TempData["info"] is not null)
+            {
+                @TempData["info"];
+            }
+        }
+    </h3>
+    <ul>
+    @{
+        foreach (var currency in @Model.Currencies)
+        {
+            <li>
+            @currency.Code - @currency.Course
+                    <a asp-action="Form" class="btn btn-primary" asp-route-code="@currency.Code">Vytvorit zadost</a>
+            </li>
+        }
+    }
+    </ul>
+</div>

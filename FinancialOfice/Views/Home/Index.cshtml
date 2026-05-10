@@ -2,7 +2,18 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
+<div>
+    @{
+        if (TempData["SuccessMessage"] is not null)
+        {
+            <div class="alert-success">@TempData["SuccessMessage"] </div>
+        }
+        else if (TempData["ErrorMessage"] is not null)
+        {
+            <div class="alert-danger">@TempData["ErrorMessage"] </div>
+        }
+    }
+</div>
 <div class="text-center">
     <h1 class="display-4">Financni urady</h1>
     <ul>

@@ -56,7 +56,17 @@ namespace FinancialOfice.Controllers
             {
                 return View(model);
             }
-            return View();
+
+            if ( await DataStorage.SaveObjectToFile("model.txt", model))
+            {
+                TempData["SuccessMessage"] = "Formuláø byl úspìšnì uložen do souboru!";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Chyba pri zapisovani do souboru!";
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

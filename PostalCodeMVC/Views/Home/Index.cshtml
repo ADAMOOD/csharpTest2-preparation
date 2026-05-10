@@ -1,0 +1,20 @@
+﻿@model PostalCodeMVC.Models.IndexModelView
+@{
+   
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">PSC</h1>
+    @{
+        if (TempData["success"] is not null)
+        {
+            <h2 class="alert-success"> @TempData["success"]</h2>
+        }
+    }
+    <form method="post">
+        <div asp-validation-summary="All"></div>
+        <input type="text" asp-for="PostalCode" placeholder="Zadejte PSC..."/>
+        <input  type="submit" />
+    </form>
+</div>

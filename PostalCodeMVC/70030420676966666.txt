@@ -1,0 +1,7 @@
+Object => FormViewModel
+{
+Name => Miroslav
+PhoneNumber => +420676966666
+PostalCode => 70030
+Country => okres Ostrava-město
+}

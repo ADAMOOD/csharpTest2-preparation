@@ -1,0 +1,11 @@
+﻿"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<searchresults querystring=\"70030, cz\">
+	<place place_id=\"378984656\" ref=\"700 30\" lat=\"49.7910979\" lon=\"18.2436280\" boundingbox=\"49.7461778,49.8360174,18.1742452,18.3130172\" place_rank=\"21\" address_rank=\"5\" display_name=\"700 30, Ostrava, okres Ostrava-město, Moravskoslezský kraj, Moravskoslezsko, Česko\" class=\"place\" type=\"postcode\">
+		<postcode>700 30</postcode>
+		<city>Ostrava</city>
+		<county>okres Ostrava-město</county>
+		<state>Moravskoslezský kraj</state>
+		<region>Moravskoslezsko</region>
+		<country>Česko</country>
+		<country_code>cz</country_code>
+	</place>
+</searchresults>\n"

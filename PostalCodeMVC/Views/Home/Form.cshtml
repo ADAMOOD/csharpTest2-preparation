@@ -1,0 +1,10 @@
+﻿@model PostalCodeMVC.Models.FormViewModel
+
+<form method="post">
+    <div asp-validation-summary="All" class="alert-danger"></div>
+    <input type="text" asp-for="Name" placeholder="Jmeno"/>
+     <input type="tel" asp-for="PhoneNumber" placeholder="+420...." />
+     <input type="text" asp-for="PostalCode" />
+    <input type="text" asp-for="Country" />
+    <input type="submit" />
+</form>
